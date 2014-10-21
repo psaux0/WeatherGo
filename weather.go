@@ -1,13 +1,12 @@
-/*
-  Yahooweather is my first program in Go. It is still under development.
-  Dependencies:
+/* 
+   Yahooweather is my first program in Go. It is still under development.
+   Dependencies:
     github.com/bitly/go-simplejson
 
    Author: psaux0
    Version: 0.01
    Last Revised Time: Oct 21, 2014
 */
-   
 package yahooweather
 
 import (
