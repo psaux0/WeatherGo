@@ -1,6 +1,6 @@
-YahooWeather
+WeatherGo
 --------------
-YahooWeather is a **Golang** package for command line weather tool for users to get weather information in the U.S. Built with **Go** programming language, YahooWeather is able to query Yahoo Weather API with high speed. 
+WeatherGo is a **Golang** package for command line weather tool for users to get weather information in the U.S. Built with **Go** programming language, WeatherGo is able to query Yahoo Weather API with high speed. 
 
 ####Install
 ```
