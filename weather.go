@@ -20,10 +20,22 @@ type Units struct {
 	Tp string
 }
 
-func BuildUrl(place string) (urlParsed string) {
+type Location struct {
+	City string
+	State string
+}
+
+func BuildLocation(city string, state string) (loc *Location){
+	return &Location {
+		city,
+		state,
+	}
+}
+
+func BuildUrl(loc *Location) (urlParsed string) {
 	Url, _ := url.Parse("https://query.yahooapis.com/v1/public/yql")
 	parameters := url.Values{}
-	parameters.Add("q","select * from weather.forecast where woeid = " + place)
+	parameters.Add("q","select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"" + loc.City + ", " + loc.State + "\")")
 	parameters.Add("format","json")
 	Url.RawQuery = parameters.Encode()
 	urlParsed = Url.String()
