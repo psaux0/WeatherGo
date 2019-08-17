@@ -12,7 +12,7 @@ package yahooweather
 import (
 	"net/http"
 	"net/url"
-	"go-simplejson-master"
+	"github.com/bitly/go-simplejson"
 	"io/ioutil"
 	"fmt"
 )
